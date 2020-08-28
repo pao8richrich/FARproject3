@@ -18,7 +18,7 @@ export const clearNews = () => ({
 });
 
 export const getNews = (category) => {
-  console.log(category);
+  
   return (dispatch) => {
     dispatch(clearNews());
 
@@ -48,7 +48,7 @@ export const getNews = (category) => {
 
 export const getNewsDate = (date) => {
  
-  console.log("mi fechita",date);
+  
   return (dispatch) => {
     dispatch(clearNews());
 
@@ -68,7 +68,6 @@ export const getNewsDate = (date) => {
       })
       .then((response) => response.json())
       .then((news) =>{
-        console.log("VER ESTO NOW" , news)
         dispatch(loadingSuccess(news.slice(0,10)))})
       .catch(() => dispatch(loadingError(true)));
       // dispatch(loadingSuccess(news)))
@@ -97,10 +96,8 @@ export const getSearch = (key) => {
       })
       .then((response) => response.json())
       .then((news) =>{
-        console.log("VER ESTO NOW" , news)
+        
         dispatch(loadingSuccess(news.slice(0,10)))})
       .catch(() => dispatch(loadingError(true)));
-      // dispatch(loadingSuccess(news)))
-      // .catch(() => dispatch(loadingError(true)));
   };
 };

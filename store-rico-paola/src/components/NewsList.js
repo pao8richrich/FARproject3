@@ -23,12 +23,12 @@ const NewsList = ({ news, hasError, isLoading,onGet ,onGetDate,getSearch, match 
     month = '0' + month;    
     if (day.length < 2)         
     day = '0' + day;    
-    console.log("formato date", date.toLocaleString())
+
     return  [year, month, day].join('-');
   }
   useEffect( ()=>{
       // onGet(1)
-      console.log("mirar matchito",match.params.category)
+
       switch(match.params.category) {
         case "Home":
           onGetDate(formatDate()) 
@@ -58,7 +58,7 @@ const NewsList = ({ news, hasError, isLoading,onGet ,onGetDate,getSearch, match 
     },[match.params.category]
   )
   
-  console.log("mirar esto", match.params.category)
+
 
   if (hasError) {
     return (
