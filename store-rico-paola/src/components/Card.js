@@ -1,14 +1,18 @@
-import React, { useContext, useState } from "react";
+// import React, { useContext, useState } from "react";
+import React, { useState, useEffect } from 'react';
 import IconCoin from '../assets/icons/coin.svg';
 import ImgCard from '../assets/product-pics/iPhone8-x2.png';
-
+import { consumeService } from '../data/networkService';
 import '../App.css';
 
-const Card = ({items, _id, name, cost, category}) => {
+const Card = ({ _id, name, cost, category}) => {
     // const { user, setUser } = useContext(AppContext);
     console.log(category)
+    // const [items, setItems]= useState([])
 
-
+    // useEffect(()=> {
+    //     consumeService({endpoint:"/products",method:"GET"}).then((res)=> setItems(res))
+    // },[items]);
 
      
     return(
