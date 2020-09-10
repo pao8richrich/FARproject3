@@ -1,10 +1,10 @@
 import React from 'react';
 import Filter from '../components/Filter'
 import Cards from './Cards'
-import CardHistory from './CardHistory'
-import Card from './Card'
-import IconCoin from '../assets/icons/coin.svg';
-import ImgCard from '../assets/product-pics/iPhone8-x2.png';
+// import CardHistory from './CardHistory'
+// import Card from './Card'
+// import IconCoin from '../assets/icons/coin.svg';
+// import ImgCard from '../assets/product-pics/iPhone8-x2.png';
 import '../App.css';
 import { Switch, Route } from "react-router-dom";
 

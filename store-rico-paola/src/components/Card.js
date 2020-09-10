@@ -1,8 +1,8 @@
 // import React, { useContext, useState } from "react";
-import React, { useState, useEffect } from 'react';
+import React  from 'react';
 import IconCoin from '../assets/icons/coin.svg';
-import ImgCard from '../assets/product-pics/iPhone8-x2.png';
-import { consumeService } from '../data/networkService';
+// import ImgCard from '../assets/product-pics/iPhone8-x2.png';
+// import { consumeService } from '../data/networkService';
 import '../App.css';
 
 const Card = ({ _id, name, cost, category}) => {

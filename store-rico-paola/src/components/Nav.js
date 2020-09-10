@@ -8,10 +8,10 @@ function Nav(){
             <nav className="bgHeader">
                 <div className="imgBgHeader">
                 <div className="headertitle">  Electronics</div>
-                    <Link to="/">
+                    <Link className="linkRouter" to="/">
                         Inicio
                     </Link>
-                    <Link to="/historial">
+                    <Link className="linkRouter" to="/historial">
                         Historial
                     </Link>
                 </div>
