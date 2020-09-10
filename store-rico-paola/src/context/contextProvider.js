@@ -5,7 +5,6 @@ export const AppContext = React.createContext();
 const initial = {
   name : '',
   points: 0
-
 }
 
 export default function AppProvider({ children }) {

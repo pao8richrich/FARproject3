@@ -11,8 +11,7 @@ const Cards =({render})=>{
 
     useEffect(()=> {
         consumeService({endpoint:"/products",method:"GET"}).then((res)=> setItems(res))
-    },[items]);
-
+},[items]);
 
 
 
