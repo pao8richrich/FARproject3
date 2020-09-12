@@ -26,7 +26,7 @@ const {next, prev, jump, currentData, currentPage } = usePagination(itemsFilter,
 
 useEffect(()=> {
     jump(1);
-},[filter,sortby,items,jump]);
+},[filter,sortby,items]);
 
 if(id==="Inicio"){
     
