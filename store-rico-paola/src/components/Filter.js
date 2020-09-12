@@ -15,16 +15,12 @@ function Filter({setFilter, setSort, sortby}){
                     <div className="infoTitle">Filter by</div>
                     <div className="select">
                         <select onChange={(event)=>(setFilter(event.target.value))}>
-                            {category.map((i)=>(<option>{i}</option>))}
+                            {category.map((i)=>(<option key={i}>{i}</option>))}
                         </select>
                         <div className="select__arrow"></div>
                         </div>
                         
-                    <div className="arrows">
-                        <div className="arrowLeft" ></div>
-                        <div className="arrowRight" ></div>
-                    
-                    </div>
+                   
 
                 </div>
         </React.Fragment>

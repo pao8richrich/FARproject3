@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 import IconCoin from '../assets/icons/coin.svg';
-import ImgCard from '../assets/product-pics/iPhone8-x2.png';
 import { consumeService } from "../data/networkService";
 import { AppContext } from "../context/contextProvider";
 import '../App.css';
@@ -12,10 +11,10 @@ const Cards =({id ,filter, sortby })=>{
     const [ismodal,setIsmodal] = useState(false);
     const [items, setItems]= useState([])
     const [response, setResponse] = useState("")
-    const {user:{name,points}, setUser} = useContext(AppContext);
+    const {user:{points}, setUser} = useContext(AppContext);
     useEffect(()=> {
-        consumeService({endpoint:"/products",method:"GET"}).then((res)=> setItems(res))
-},[]);
+        consumeService({endpoint:(id=== "Inicio") ? "/products": "/user/history",method:"GET"}).then((res)=> setItems(res));
+},[id]);
 const handleRedeem = (product) => {
 
     consumeService({ endpoint:"/redeem", method:"POST", body:{ "productId": product} }).then((res) => setResponse(res.message)).catch(setResponse("Error ayuda!"));
@@ -23,12 +22,11 @@ const handleRedeem = (product) => {
     consumeService({ endpoint:"/user/me", method:"GET" }).then((res) => setUser(res) );
 }
 const itemsFilter = items.filter((element)=>(filter === "Select all" || element.category === filter )).sort((a,b)=>((sortby === "Lowest price")?a.cost-b.cost:b.cost-a.cost));
-const {next, prev, jump, currentData, currentPage, maxPage } = usePagination(itemsFilter,16);
+const {next, prev, jump, currentData, currentPage } = usePagination(itemsFilter,16);
 
 useEffect(()=> {
     jump(1);
-    
-},[filter,sortby,items]);
+},[filter,sortby,items,jump]);
 
 if(id==="Inicio"){
     
