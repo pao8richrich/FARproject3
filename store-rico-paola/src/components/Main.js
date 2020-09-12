@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Filter from '../components/Filter'
 import Cards from './Cards'
+import AddPoints from './AddPoints'
+import { useLocation } from 'react-router-dom'
 // import CardHistory from './CardHistory'
 // import Card from './Card'
 // import IconCoin from '../assets/icons/coin.svg';
@@ -11,14 +13,15 @@ import { Switch, Route } from "react-router-dom";
 function Main(){    
     const [filter, setFilter] = useState("Select all");
     const [sortby, setSort] = useState("");
+ 
+    const showFilter = !useLocation().pathname.includes("addpoints");
     return(
         <React.Fragment>
             <main>
-                <Filter  setFilter={setFilter} setSort={setSort} sortby={sortby}></Filter>
+                {showFilter &&  <Filter  setFilter={setFilter} setSort={setSort} sortby={sortby}></Filter>}
                 
                 <Switch>
-                    {/* <Route exact path="/" component={Cards} />
-                    <Route exact path="/historial" component={CardHistory} /> */}
+                  
                     
                     <Route
                         path="/FARproject3"
@@ -45,11 +48,17 @@ function Main(){
                             );
                         }}
                     />
+                    <Route
+                        path="/FARproject3/addpoints"
+                        render={() => {
+                            return (
+                                <AddPoints/>
+                            );
+                        }}
+                    />
                    
                 </Switch>
-                {/* <Cards
-                    render={(item) => <Card {...item}/>}
-                /> */}
+               
                 
             </main>
         </React.Fragment>

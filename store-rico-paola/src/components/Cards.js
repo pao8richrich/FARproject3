@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import IconCoin from '../assets/icons/coin.svg';
 import ImgCard from '../assets/product-pics/iPhone8-x2.png';
-// import Card from '../components/Card'
+import { consumeService } from "../data/networkService";
+import { AppContext } from "../context/contextProvider";
 import '../App.css';
-import { consumeService } from '../data/networkService';
-
 import Modal from './Modal'
-// import { render } from '@testing-library/react';
 
 const Cards =({id ,filter, sortby })=>{
 
     const [ismodal,setIsmodal] = useState(false);
     const [items, setItems]= useState([])
     const [response, setResponse] = useState("")
+    const {user:{name,points}, setUser} = useContext(AppContext);
     useEffect(()=> {
         consumeService({endpoint:"/products",method:"GET"}).then((res)=> setItems(res))
 },[]);
@@ -21,6 +20,7 @@ const handleRedeem = (product) => {
 
     consumeService({ endpoint:"/redeem", method:"POST", body:{ "productId": product} }).then((res) => setResponse(res.message)).catch(setResponse("Error ayuda!"));
     setIsmodal(true);
+    consumeService({ endpoint:"/user/me", method:"GET" }).then((res) => setUser(res) );
 }
 
 console.log("id", id )

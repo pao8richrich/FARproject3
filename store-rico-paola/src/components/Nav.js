@@ -9,10 +9,13 @@ function Nav(){
                 <div className="imgBgHeader">
                 <div className="headertitle">  Electronics</div>
                     <Link className="linkRouter" to="/FARproject3">
-                        Inicio
+                        Home
                     </Link>
                     <Link className="linkRouter" to="/FARproject3/historial">
-                        Historial
+                        History 
+                    </Link>
+                    <Link className="linkRouter" to="/FARproject3/addpoints">
+                        Add points
                     </Link>
                 </div>
             </nav>
