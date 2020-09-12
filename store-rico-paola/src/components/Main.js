@@ -10,25 +10,24 @@ import { useLocation } from 'react-router-dom'
 import '../App.css';
 import { Switch, Route } from "react-router-dom";
 
+
 function Main(){    
     const [filter, setFilter] = useState("Select all");
     const [sortby, setSort] = useState("");
- 
     const showFilter = !useLocation().pathname.includes("addpoints");
+
     return(
         <React.Fragment>
             <main>
                 {showFilter &&  <Filter  setFilter={setFilter} setSort={setSort} sortby={sortby}></Filter>}
-                
                 <Switch>
-                  
-                    
                     <Route
                         path="/FARproject3"
                         exact
                         render={() => {
                             return (
                                 <Cards
+
                                 id="Inicio"
                                 filter={filter}
                                 sortby={sortby}

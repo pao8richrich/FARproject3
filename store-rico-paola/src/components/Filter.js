@@ -1,10 +1,9 @@
 import React from 'react';
 import '../App.css';
-
 function Filter({setFilter, setSort, sortby}){
 
     const category=["Select all","Phones","Gamming","Laptops" , "Tablets & E-readers", "Audio", "Monitors & TV", "Smart Home","Home Accessories", "PC Accessories","Cameras" , "Drones"]
-
+    
     return(
         <React.Fragment>
                 <div className="infoSearch">
@@ -25,8 +24,8 @@ function Filter({setFilter, setSort, sortby}){
                         <div className="arrowLeft" ></div>
                         <div className="arrowRight" ></div>
                     
-
                     </div>
+
                 </div>
         </React.Fragment>
     )

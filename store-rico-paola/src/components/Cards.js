@@ -5,6 +5,7 @@ import { consumeService } from "../data/networkService";
 import { AppContext } from "../context/contextProvider";
 import '../App.css';
 import Modal from './Modal'
+import usePagination from './Pagination';
 
 const Cards =({id ,filter, sortby })=>{
 
@@ -15,23 +16,36 @@ const Cards =({id ,filter, sortby })=>{
     useEffect(()=> {
         consumeService({endpoint:"/products",method:"GET"}).then((res)=> setItems(res))
 },[]);
-
 const handleRedeem = (product) => {
 
     consumeService({ endpoint:"/redeem", method:"POST", body:{ "productId": product} }).then((res) => setResponse(res.message)).catch(setResponse("Error ayuda!"));
     setIsmodal(true);
     consumeService({ endpoint:"/user/me", method:"GET" }).then((res) => setUser(res) );
 }
+const itemsFilter = items.filter((element)=>(filter === "Select all" || element.category === filter )).sort((a,b)=>((sortby === "Lowest price")?a.cost-b.cost:b.cost-a.cost));
+const {next, prev, jump, currentData, currentPage, maxPage } = usePagination(itemsFilter,16);
+
+useEffect(()=> {
+    jump(1);
+    
+},[filter,sortby,items]);
 
 if(id==="Inicio"){
+    
     return(
         <React.Fragment>
+
+                    <div className="arrows">
+                        <div className="arrowLeft" onClick={()=>(prev())}></div>
+                        {currentPage}
+                        <div className="arrowRight" onClick={()=>(next())}></div>
+                    </div>
              {ismodal&&<Modal> {response}</Modal> }
             <div className="cards">
                 <div className="box">
    
 
-                    {items.filter((element)=>(filter === "Select all" || element.category === filter )).sort((a,b)=>((sortby === "Lowest price")?a.cost-b.cost:b.cost-a.cost)).map((item, i) => (
+                    {currentData().map((item, i) => (
                         // <Card key={i} item={item} />
 
                         <div id="card-container" key={i}>
@@ -72,27 +86,15 @@ if(id==="Inicio"){
 } else{
     return(
         <React.Fragment>
+            <div className="arrows">
+                        <div className="arrowLeft" onClick={()=>(prev())}></div>
+                        {currentPage}
+                        <div className="arrowRight" onClick={()=>(next())}></div>
+                    </div>
             <div className="cards">
                 <div className="box2">
-                {items.filter((element)=>(filter === "Select all" || element.category === filter )).sort((a,b)=>((sortby === "Lowest price")?a.cost-b.cost:b.cost-a.cost)).map((item, i) => (
-                        // <Card key={i} item={item} />
-
-                        // <div id="card-container" key={i}>
-                        //     <h1>Historial</h1>
-                        //     <div id="card2"  className="card">
-                        //         <div className="front face">
-                        //             <div className="imgCard">
-                        //                 <img src={item.img.url}  className="" alt="Product" />
-                        //                 <div className="iconBuy"></div>
-                        //             </div>
-                        //             <div className="infoCard">
-                        //                 <div className="lineCard"></div>
-                        //                 <div className="categoryCard">{item.category} </div>
-                        //                 <div className="nameCard"> {item.name}</div>
-                        //             </div>
-                        //         </div>
-                        //     </div>
-                        // </div>
+                {currentData().map((item, i) => (
+                       
                         
 
                         <div className="blog-card" key={i}>
