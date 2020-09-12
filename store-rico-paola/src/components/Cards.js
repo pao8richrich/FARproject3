@@ -4,21 +4,34 @@ import ImgCard from '../assets/product-pics/iPhone8-x2.png';
 // import Card from '../components/Card'
 import '../App.css';
 import { consumeService } from '../data/networkService';
+
+import Modal from './Modal'
 // import { render } from '@testing-library/react';
 
 const Cards =({id ,filter, sortby })=>{
-    const [items, setItems]= useState([])
 
+    const [ismodal,setIsmodal] = useState(false);
+    const [items, setItems]= useState([])
+    const [response, setResponse] = useState("")
     useEffect(()=> {
         consumeService({endpoint:"/products",method:"GET"}).then((res)=> setItems(res))
 },[]);
+
+const handleRedeem = (product) => {
+
+    consumeService({ endpoint:"/redeem", method:"POST", body:{ "productId": product} }).then((res) => setResponse(res.message)).catch(setResponse("Error ayuda!"));
+    setIsmodal(true);
+}
 
 console.log("id", id )
 if(id==="Inicio"){
     return(
         <React.Fragment>
+             {ismodal&&<Modal> {response}</Modal> }
             <div className="cards">
                 <div className="box">
+   
+
                     {items.filter((element)=>(filter === "Select all" || element.category === filter )).sort((a,b)=>((sortby === "Lowest price")?a.cost-b.cost:b.cost-a.cost)).map((item, i) => (
                         // <Card key={i} item={item} />
 
@@ -41,7 +54,7 @@ if(id==="Inicio"){
                                     <h1 className="price">  {item.cost} <img src={IconCoin} className="cardCoinBack" alt="IconCoin" />
                                     
                                     </h1>
-                                    <button className="btn btnRedeem">Redeem Now</button>
+                                    <button className="btn btnRedeem" onClick={()=>(handleRedeem(item._id))}>Redeem Now</button>
                                 </div>
                             </div>
                         </div>

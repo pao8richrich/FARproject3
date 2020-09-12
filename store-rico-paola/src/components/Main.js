@@ -21,7 +21,7 @@ function Main(){
                     <Route exact path="/historial" component={CardHistory} /> */}
                     
                     <Route
-                        path="/"
+                        path="/FARproject3"
                         exact
                         render={() => {
                             return (
@@ -34,7 +34,7 @@ function Main(){
                         }}
                     />
                     <Route
-                        path="/historial"
+                        path="/FARproject3/historial"
                         render={() => {
                             return (
                                 <Cards

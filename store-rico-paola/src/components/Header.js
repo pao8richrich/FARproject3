@@ -7,7 +7,7 @@ import '../App.css';
 import Modal from './Modal'
 
 const Header = () => {
-    const addPoints= [1000,5000,7500]
+    const addPoints= [1000,5000,7500];
     const [ismodal,setIsmodal] = useState(false);
     const [selectPoint,setSelectPoint] = useState(addPoints[0]);
     const {user:{name,points}, setUser} = useContext(AppContext);
