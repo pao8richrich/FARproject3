@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Filter from '../components/Filter'
 import Cards from './Cards'
 // import CardHistory from './CardHistory'
@@ -9,12 +9,13 @@ import '../App.css';
 import { Switch, Route } from "react-router-dom";
 
 function Main(){    
-
+    const [filter, setFilter] = useState("Select all");
+    const [sort, setSort] = useState("");
     return(
         <React.Fragment>
             <main>
-                <Filter></Filter>
-
+                <Filter  setFilter={setFilter}></Filter>
+                
                 <Switch>
                     {/* <Route exact path="/" component={Cards} />
                     <Route exact path="/historial" component={CardHistory} /> */}
@@ -26,6 +27,8 @@ function Main(){
                             return (
                                 <Cards
                                 id="Inicio"
+                                filter={filter}
+                                sort={sort}
                                 />
                             );
                         }}
@@ -36,6 +39,8 @@ function Main(){
                             return (
                                 <Cards
                                 id="History"
+                                filter={filter}
+                                sort={sort}
                                 />
                             );
                         }}
