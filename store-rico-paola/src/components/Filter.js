@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-function Filter({setFilter}){
+function Filter({setFilter, setSort, sortby}){
 
     const category=["Select all","Phones","Gamming","Laptops" , "Tablets & E-readers", "Audio", "Monitors & TV", "Smart Home","Home Accessories", "PC Accessories","Cameras" , "Drones"]
 
@@ -9,8 +9,8 @@ function Filter({setFilter}){
         <React.Fragment>
                 <div className="infoSearch">
                     <div className="infoTitle">Sort by</div>
-                    <button className="btn active ">Lowest prince</button>
-                    <button className="btn ">Highest  price</button>
+                    <button className={(sortby === "Lowest price")? "btn active": "btn"} onClick={()=>(setSort("Lowest price"))}>Lowest Price</button>
+                    <button className={(sortby === "Highest Price")? "btn active": "btn"} onClick={()=>(setSort("Highest Price"))}>Highest Price</button>
                 
 
                     <div className="infoTitle">Filter by</div>

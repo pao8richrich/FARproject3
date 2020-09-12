@@ -6,7 +6,7 @@ import '../App.css';
 import { consumeService } from '../data/networkService';
 // import { render } from '@testing-library/react';
 
-const Cards =({id,filter, sort })=>{
+const Cards =({id ,filter, sortby })=>{
     const [items, setItems]= useState([])
 
     useEffect(()=> {
@@ -19,7 +19,7 @@ if(id==="Inicio"){
         <React.Fragment>
             <div className="cards">
                 <div className="box">
-                    {items.filter((element)=>(filter === "Select all" || element.category === filter )).map((item, i) => (
+                    {items.filter((element)=>(filter === "Select all" || element.category === filter )).sort((a,b)=>((sortby === "Lowest price")?a.cost-b.cost:b.cost-a.cost)).map((item, i) => (
                         // <Card key={i} item={item} />
 
                         <div id="card-container" key={i}>
@@ -61,7 +61,7 @@ if(id==="Inicio"){
         <React.Fragment>
             <div className="cards">
                 <div className="box2">
-                    {items.map((item, i) => (
+                {items.filter((element)=>(filter === "Select all" || element.category === filter )).sort((a,b)=>((sortby === "Lowest price")?a.cost-b.cost:b.cost-a.cost)).map((item, i) => (
                         // <Card key={i} item={item} />
 
                         // <div id="card-container" key={i}>

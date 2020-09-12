@@ -10,11 +10,11 @@ import { Switch, Route } from "react-router-dom";
 
 function Main(){    
     const [filter, setFilter] = useState("Select all");
-    const [sort, setSort] = useState("");
+    const [sortby, setSort] = useState("");
     return(
         <React.Fragment>
             <main>
-                <Filter  setFilter={setFilter}></Filter>
+                <Filter  setFilter={setFilter} setSort={setSort} sortby={sortby}></Filter>
                 
                 <Switch>
                     {/* <Route exact path="/" component={Cards} />
@@ -28,7 +28,7 @@ function Main(){
                                 <Cards
                                 id="Inicio"
                                 filter={filter}
-                                sort={sort}
+                                sortby={sortby}
                                 />
                             );
                         }}
@@ -40,7 +40,7 @@ function Main(){
                                 <Cards
                                 id="History"
                                 filter={filter}
-                                sort={sort}
+                                sortby={sortby}
                                 />
                             );
                         }}
