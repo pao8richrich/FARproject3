@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import IconCoin from '../assets/icons/coin.svg';
-// import ImgCard from '../assets/product-pics/iPhone8-x2.png';
+import ImgCard from '../assets/product-pics/iPhone8-x2.png';
 // import Card from '../components/Card'
 import '../App.css';
 import { consumeService } from '../data/networkService';
