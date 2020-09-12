@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/FARproject3/precache-manifest.b1869f0b6aa288ea283581677318fad7.js"
+  "/FARproject3/precache-manifest.f4e08bba2065386d5eb472a7c3aee41d.js"
 );
 
 self.addEventListener('message', (event) => {

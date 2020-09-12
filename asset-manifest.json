@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/FARproject3/static/css/main.5f361e03.chunk.css",
-    "main.js": "/FARproject3/static/js/main.f4abe9b5.chunk.js",
-    "main.js.map": "/FARproject3/static/js/main.f4abe9b5.chunk.js.map",
+    "main.css": "/FARproject3/static/css/main.bad772ac.chunk.css",
+    "main.js": "/FARproject3/static/js/main.b8a0973b.chunk.js",
+    "main.js.map": "/FARproject3/static/js/main.b8a0973b.chunk.js.map",
     "runtime-main.js": "/FARproject3/static/js/runtime-main.84604774.js",
     "runtime-main.js.map": "/FARproject3/static/js/runtime-main.84604774.js.map",
-    "static/js/2.f4d943aa.chunk.js": "/FARproject3/static/js/2.f4d943aa.chunk.js",
-    "static/js/2.f4d943aa.chunk.js.map": "/FARproject3/static/js/2.f4d943aa.chunk.js.map",
+    "static/js/2.8cd83570.chunk.js": "/FARproject3/static/js/2.8cd83570.chunk.js",
+    "static/js/2.8cd83570.chunk.js.map": "/FARproject3/static/js/2.8cd83570.chunk.js.map",
     "index.html": "/FARproject3/index.html",
-    "precache-manifest.b1869f0b6aa288ea283581677318fad7.js": "/FARproject3/precache-manifest.b1869f0b6aa288ea283581677318fad7.js",
+    "precache-manifest.f4e08bba2065386d5eb472a7c3aee41d.js": "/FARproject3/precache-manifest.f4e08bba2065386d5eb472a7c3aee41d.js",
     "service-worker.js": "/FARproject3/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/FARproject3/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.f4d943aa.chunk.js.LICENSE.txt": "/FARproject3/static/js/2.f4d943aa.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/FARproject3/static/media/logo.5d5d9eef.svg"
+    "static/css/main.bad772ac.chunk.css.map": "/FARproject3/static/css/main.bad772ac.chunk.css.map",
+    "static/js/2.8cd83570.chunk.js.LICENSE.txt": "/FARproject3/static/js/2.8cd83570.chunk.js.LICENSE.txt",
+    "static/media/aerolab-logo.svg": "/FARproject3/static/media/aerolab-logo.71af6f4b.svg",
+    "static/media/App.css": "/FARproject3/static/media/header-x1.f0b98264.png",
+    "static/media/coin.svg": "/FARproject3/static/media/coin.4669120c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.84604774.js",
-    "static/js/2.f4d943aa.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.f4abe9b5.chunk.js"
+    "static/js/2.8cd83570.chunk.js",
+    "static/css/main.bad772ac.chunk.css",
+    "static/js/main.b8a0973b.chunk.js"
   ]
 }
