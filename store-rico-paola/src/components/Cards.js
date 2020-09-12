@@ -23,7 +23,6 @@ const handleRedeem = (product) => {
     consumeService({ endpoint:"/user/me", method:"GET" }).then((res) => setUser(res) );
 }
 
-console.log("id", id )
 if(id==="Inicio"){
     return(
         <React.Fragment>
@@ -42,6 +41,7 @@ if(id==="Inicio"){
                                     <div className="imgCard">
                                         <img src={item.img.url}  className="" alt="Product" />
                                         <div className="iconBuy"></div>
+                                       {(item.cost - points >0) && <div className="iconBuy">You need {item.cost  - points}</div>}
                                     </div>
                                     <div className="infoCard">
                                         <div className="lineCard"></div>
@@ -54,7 +54,7 @@ if(id==="Inicio"){
                                     <h1 className="price">  {item.cost} <img src={IconCoin} className="cardCoinBack" alt="IconCoin" />
                                     
                                     </h1>
-                                    <button className="btn btnRedeem" onClick={()=>(handleRedeem(item._id))}>Redeem Now</button>
+                                    {(item.cost - points < 0) && <button className="btn btnRedeem" onClick={()=>(handleRedeem(item._id))}>Redeem Now</button>}
                                 </div>
                             </div>
                         </div>
