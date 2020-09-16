@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/FARproject3/static/css/main.6e0c2ac3.chunk.css",
-    "main.js": "/FARproject3/static/js/main.92bea77f.chunk.js",
-    "main.js.map": "/FARproject3/static/js/main.92bea77f.chunk.js.map",
+    "main.css": "/FARproject3/static/css/main.d7ee99d7.chunk.css",
+    "main.js": "/FARproject3/static/js/main.0308a859.chunk.js",
+    "main.js.map": "/FARproject3/static/js/main.0308a859.chunk.js.map",
     "runtime-main.js": "/FARproject3/static/js/runtime-main.84604774.js",
     "runtime-main.js.map": "/FARproject3/static/js/runtime-main.84604774.js.map",
-    "static/js/2.8cd83570.chunk.js": "/FARproject3/static/js/2.8cd83570.chunk.js",
-    "static/js/2.8cd83570.chunk.js.map": "/FARproject3/static/js/2.8cd83570.chunk.js.map",
+    "static/js/2.7ea62a0b.chunk.js": "/FARproject3/static/js/2.7ea62a0b.chunk.js",
+    "static/js/2.7ea62a0b.chunk.js.map": "/FARproject3/static/js/2.7ea62a0b.chunk.js.map",
     "index.html": "/FARproject3/index.html",
-    "precache-manifest.bd7648780184cd7348255d7d465e5de8.js": "/FARproject3/precache-manifest.bd7648780184cd7348255d7d465e5de8.js",
+    "precache-manifest.a8e082b4c63f76c8715b1879e0d72850.js": "/FARproject3/precache-manifest.a8e082b4c63f76c8715b1879e0d72850.js",
     "service-worker.js": "/FARproject3/service-worker.js",
-    "static/css/main.6e0c2ac3.chunk.css.map": "/FARproject3/static/css/main.6e0c2ac3.chunk.css.map",
-    "static/js/2.8cd83570.chunk.js.LICENSE.txt": "/FARproject3/static/js/2.8cd83570.chunk.js.LICENSE.txt",
+    "static/css/main.d7ee99d7.chunk.css.map": "/FARproject3/static/css/main.d7ee99d7.chunk.css.map",
+    "static/js/2.7ea62a0b.chunk.js.LICENSE.txt": "/FARproject3/static/js/2.7ea62a0b.chunk.js.LICENSE.txt",
     "static/media/aerolab-logo.svg": "/FARproject3/static/media/aerolab-logo.71af6f4b.svg",
     "static/media/App.css": "/FARproject3/static/media/header-x1.f0b98264.png",
     "static/media/coin.svg": "/FARproject3/static/media/coin.4669120c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.84604774.js",
-    "static/js/2.8cd83570.chunk.js",
-    "static/css/main.6e0c2ac3.chunk.css",
-    "static/js/main.92bea77f.chunk.js"
+    "static/js/2.7ea62a0b.chunk.js",
+    "static/css/main.d7ee99d7.chunk.css",
+    "static/js/main.0308a859.chunk.js"
   ]
 }
