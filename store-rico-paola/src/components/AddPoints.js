@@ -18,10 +18,16 @@ function AddPoints(){
     }
   return(
     <React.Fragment>
-      <h1>Agregar Putitos</h1>
-            {addPoints.map((i) => <button onClick={()=>(setSelectPoint(i))}>{i}</button>)}
-             {selectPoint} <br></br>{messagepoints}
-             <button onClick={()=>(handleAddPoint())}>Add</button>
+          <div className="CardPoints">
+            <div className="CardTittle">Add Points </div>
+            {addPoints.map((i) => <button className="btnPoints" onClick={()=>(setSelectPoint(i))}>{i}</button>)}
+            
+          <div className="selectPoint">   {selectPoint} </div>
+          
+             <button className="btnAdd" onClick={()=>(handleAddPoint())}>Add</button>
+
+             <div className="messagepoints"> {messagepoints} </div>
+          </div>
     </React.Fragment>
   )
 }

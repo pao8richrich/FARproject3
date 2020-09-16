@@ -4,7 +4,7 @@ import IconCoin from '../assets/icons/coin.svg';
 import { consumeService } from "../data/networkService";
 import { AppContext } from "../context/contextProvider";
 import '../App.css';
-import Modal from './Modal'
+// import Modal from './Modal'
 
 const Header = () => {
     const addPoints= [1000,5000,7500];
@@ -32,11 +32,11 @@ const Header = () => {
                 
             </div>
 
-            {ismodal&&<Modal> <h1>Agregar Putitos</h1>
+            {/* {ismodal&&<Modal> <h1>Agregar Putitos</h1>
             {addPoints.map((i) => <button onClick={()=>(setSelectPoint(i))}>{i}</button>)}
              {selectPoint}
              <button onClick={()=>(handleAddPoint())}>Add</button>
-            </Modal> }
+            </Modal> } */}
             </header>
         </React.Fragment>
     )

@@ -115,23 +115,33 @@ main{
 .infoSearch{
   display: flex;
   align-content: stretch;
+  justify-content: center;
   align-items: center;
-  padding: 10px 20px;
+  padding: 3px 20px 7px 20px;
   border-bottom: 1px solid #d5d5d5;
 }
 .infoTitle{
   color: #474747;
 }
 .arrows{
-  margin: 2px;
-  float: right;
+  margin: 9px 9px;
+  /* float: right; */
   display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
-
+.arrowsText{
+  color: grey;
+  font-size: 18px;
+  font-weight: 500;
+  width: 20px;
+  text-align: center;
+}
 .arrowLeft{
   padding: 0px 2px;
-   height: 40px;
-   width: 50px;
+   height: 30px;
+   width: 30px;
   background-image:url(./assets/icons/arrow-left.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -139,16 +149,17 @@ main{
 }
 .arrowLeft:hover{
   padding: 0px 2px;
-   height: 40px;
-   width: 50px;
+   height: 30px;
+   width: 30px;
   background-image:url(./assets/icons/arrow-left-Hover.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  cursor: pointer;
 }
 .arrowRight{
   padding: 0px 2px;
-  height: 40px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   background-image:url(./assets/icons/arrow-right.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -156,11 +167,12 @@ main{
 }
 .arrowRight:hover{
   padding: 0px 2px;
-  height: 40px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   background-image:url(./assets/icons/arrow-right-Hover.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  cursor: pointer;
 }
 .select {
   position: relative;
@@ -214,12 +226,13 @@ main{
   border-top-color: #ccc;
 }
 .cards{
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   padding: 10px 0px;
+  margin-top: 2px;
 }
 .card{
-  position: relative;
+  position: static;
   z-index: 1;
   display: block;
   background: #FFFFFF;
@@ -241,6 +254,33 @@ main{
   background-color: #d2d2d2;
   align-content: center;
   justify-content: center;
+}
+.iconNeeded{
+  height: 26px;
+  width: 150px;
+  position: relative;
+  bottom: -40px;
+  float: right;
+  right: 8px;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #7b7b7b8a;
+  background: #616161a3;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  border-radius: 100px;
+}
+.iconNeeded img {
+  background: #ffffff00;
+  height: 15px;
+  overflow: hidden;
+}
+.nameCard img {
+  background: #ffffff00;
+  height: 15px;
+  overflow: hidden;
 }
 .iconBuy{
   height: 40px;
@@ -601,12 +641,100 @@ justify-content: center;
 
 
 
+.CardPoints{
+    position: static;
+    z-index: 1;
+    display: block;
+    background: #FFFFFF;
+    min-width: 300px;
+    height: 280px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s linear 0s;
+  
+}
+.CardTittle{
+  font-weight: 500;
+  font-size: 22px;
+  color: blue;
+  color: #14c7e7;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 8px 20px;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 11px;
+}
+.btnPoints{
+  background-color: rgb(219, 219, 219);
+  padding: 7px 30px;
+  width: 163px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #616161;
+  border: 3px solid #ffffff;
+  border-radius: 32px;
+}
+.btnPoints:hover{
+  background-color: #fabb15;
+  color: #3d3d3d;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+.btnPoints:focus{
+  background-color: #f3b000;
+  color: #3d3d3d;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: transparent auto 1px;
+}
+.btnAdd{
+  background-color: rgb(20 199 231);
+  padding: 7px 30px;
+  width: 163px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #fdfcfc;
+  border: 3px solid #ffffff;
+  border-radius: 32px;
+  text-transform: uppercase;
+}
+.btnAdd:hover{
+  background-color: rgb(22 94 143);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.btnAdd:focus{
+  background-color:rgb(22 94 143);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  outline: transparent auto 1px;
+}
+.selectPoint {
+  color: #ffc700;
+  margin: 20px;
+  font-size: 40px;
+  font-weight: 700;
+  /* width: 30px; */
+  /* background: #efefef; */
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
 
-
-
-
-
-
+.messagepoints{
+  color: #5ad67d;
+  margin: 13px;
+  font-weight: 600;
+  text-transform: none;
+}
 /* MODAL------------- */
 
 .my-modal {

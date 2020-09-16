@@ -35,7 +35,7 @@ if(id==="Inicio"){
 
                     <div className="arrows">
                         <div className="arrowLeft" onClick={()=>(prev())}></div>
-                        {currentPage}
+                        <div className="arrowsText">{currentPage}</div>
                         <div className="arrowRight" onClick={()=>(next())}></div>
                     </div>
              {ismodal&&<Modal> {response}</Modal> }
@@ -53,13 +53,13 @@ if(id==="Inicio"){
                                     <div className="imgCard">
                                         <img src={item.img.url}  className="" alt="Product" />
                                         <div className="iconBuy"></div>
-                                       {(item.cost - points >0) && <div className="iconBuy">You need {item.cost  - points}</div>}
+                                       {(item.cost - points >0) && <div className="iconNeeded">You need  {item.cost  - points} <img src={IconCoin} className="IconCoin2" alt="IconCoin" />  </div>}
                                     </div>
                                     <div className="infoCard">
                                         <div className="lineCard"></div>
                                         <div className="categoryCard">{item.category} </div>
                                         <div className="nameCard"> {item.name}</div>
-                                        <div className="nameCard">{item.cost}</div>
+                                        <div className="nameCard"><img src={IconCoin} className="IconCoin2" alt="IconCoin" /> {item.cost}</div>
                                     </div>
                                 </div>
                                 <div className="back face ">
