@@ -28,17 +28,25 @@ useEffect(()=> {
     jump(1);
 },[filter,sortby,items]);
 
+
+
+
+
+const handleClose = ()=>{
+    setIsmodal(false);
+  }
+
 if(id==="Inicio"){
     
     return(
         <React.Fragment>
-
-                    <div className="arrows">
-                        <div className="arrowLeft" onClick={()=>(prev())}></div>
-                        <div className="arrowsText">{currentPage}</div>
-                        <div className="arrowRight" onClick={()=>(next())}></div>
-                    </div>
-             {ismodal&&<Modal> {response}</Modal> }
+            <div className="arrows">
+                <div className="arrowLeft" onClick={()=>(prev())}></div>
+                <div className="arrowsText">{currentPage}</div>
+                <div className="arrowRight" onClick={()=>(next())}></div>
+            </div>
+             {ismodal&&<Modal>
+           <button  class="modal-close" onClick={()=>(handleClose())} > x </button>{response}</Modal> }
             <div className="cards">
                 <div className="box">
    

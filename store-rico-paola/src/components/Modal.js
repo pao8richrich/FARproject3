@@ -14,7 +14,19 @@ const Modal = (props) => {
     };
   }, [element]);
 
-  return createPortal(<div>{props.children}</div>, element);
+  return createPortal(
+    
+      <div className="modal-container">
+      <div className="my-modal">
+          
+          {props.children}
+      </div>
+  
+  </div>, element);
+    
+    
+    
+   
 };
 
 export default Modal;
