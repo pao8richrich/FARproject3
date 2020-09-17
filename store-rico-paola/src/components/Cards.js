@@ -5,6 +5,7 @@ import { AppContext } from "../context/contextProvider";
 import '../App.css';
 import Modal from './Modal'
 import usePagination from './Pagination';
+import imgProduct from '../assets/product.svg';
 
 const Cards =({id ,filter, sortby })=>{
 
@@ -46,7 +47,11 @@ if(id==="Inicio"){
                 <div className="arrowRight" onClick={()=>(next())}></div>
             </div>
              {ismodal&&<Modal>
-           <button  class="modal-close" onClick={()=>(handleClose())} > x </button>{response}</Modal> }
+                <button  class="modal-close" onClick={()=>(handleClose())} > x </button>
+                <div className="textModal">
+                <img src={imgProduct} className="ProductModal" alt="Product Modal" />
+                     {response}</div>      
+           </Modal> }
             <div className="cards">
                 <div className="box">
    

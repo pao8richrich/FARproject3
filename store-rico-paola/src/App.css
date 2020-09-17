@@ -749,34 +749,14 @@ justify-content: center;
   bottom: 0;
   margin: auto;
   width: 300px;
-  height: 300px;
-  box-shadow: 0 5px 10px 2px rgba(195,192,192,.5);
+  /* height: 300px; */
+  height: fit-content;
+  /* box-shadow: 0 5px 10px 2px rgba(195,192,192,.5); */
   padding: 20px;
   z-index: 999;
   text-align: center;
  }
- .modal-close {
-  position: absolute;
-  right: 6px;
-  top: 9px;
-  cursor: pointer;
-  border: none;
-  font-size: 20px;
- }
- .modal-toggle-button {
-  cursor: pointer;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-top: 20px;
- }
- .modal-toggle-button:focus {
-  outline: none;
- }
+
 
 
 .modal-container {
@@ -793,25 +773,6 @@ justify-content: center;
   padding: 50px 20px;
 }
 
-.modal {
-  height: fit-content;
-  min-height: 20%;
-  min-width: 40%;
-  background-color: #ffffff;
-  position: relative;
-  border: 5px;
-  border-radius: 2rem;
-  padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px;
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
-    Helvetica Neue, sans-serif;
-  font-size: 14px;
-  line-height: 1.43;
-  color: #484848;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .modal-close {
   position: absolute;
@@ -820,4 +781,13 @@ justify-content: center;
   cursor: pointer;
   border: none;
   font-size: 20px;
+}
+
+.textModal{
+  margin-top: 20px;
+  font-size: 19px;
+  font-weight: 300;
+}
+.ProductModal{
+  height: 200px;
 }
