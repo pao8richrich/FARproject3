@@ -47,7 +47,7 @@ if(id==="Inicio"){
                 <div className="arrowRight" onClick={()=>(next())}></div>
             </div>
              {ismodal&&<Modal>
-                <button  class="modal-close" onClick={()=>(handleClose())} > x </button>
+                <button  className="modal-close" onClick={()=>(handleClose())} > x </button>
                 <div className="textModal">
                 <img src={imgProduct} className="ProductModal" alt="Product Modal" />
                      {response}</div>      
