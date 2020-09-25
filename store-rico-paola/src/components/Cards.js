@@ -18,7 +18,7 @@ const Cards =({id ,filter, sortby })=>{
 },[id]);
 const handleRedeem = (product) => {
 
-    consumeService({ endpoint:"/redeem", method:"POST", body:{ "productId": product} }).then((res) => setResponse(res.message)).catch(setResponse("Error ayuda!"));
+    consumeService({ endpoint:"/redeem", method:"POST", body:{ "productId": product} }).then((res) => setResponse(res.message));
     setIsmodal(true);
     consumeService({ endpoint:"/user/me", method:"GET" }).then((res) => setUser(res) );
 }
